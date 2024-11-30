@@ -5,6 +5,34 @@
 {% endblock %}
 
 {% block body %}
-<h1>Dashboard</h1>
-<h3>Here are your passwords</h3>
+<h1 id="Main_Tittle">Password Generator</h1>
+    <form id="Form_password" action="" method="post">
+        <h2>How long did you want the Password:</h2>
+        <input type="number" id="quantity" name="quantity" min="1" max="99">
+        <h2>The Password should have:</h2>
+        <div class="container">
+            <nav class="options">
+            <input class="check" type="checkbox" name="Numbers" id="Num">
+            <label class="Label_options" for="Num">Numbers </label>
+            </nav>
+            <nav class="options">
+            <input class="check" type="checkbox" name="UpperCase" id="UC">
+            <label class="Label_options" for="UC">UpperCase</label>
+            </nav>
+            <nav class="options">
+            <input  class="check" type="checkbox" name="LowerCase" id="LC">
+            <label class="Label_options" for="LC">LowerCase </label>
+            </nav>
+            <nav class="options">
+            <input class="check" type="checkbox" name="SpecialCharacters" id="SC">
+            <label class="Label_options" for="SC">SpecialCharacters </label>
+            </nav>
+        </div>
+        <button id="Submit_button" type="submit">Generate Password</button>
+    </form>
+    <h2>Password:</h2>
+    <input type="text" name="Show_password" id="Psswrd">
+    <button id="Save_button">Save</button>
+    <button id="Copy_button">Copy</button>
+
 {% endblock %}

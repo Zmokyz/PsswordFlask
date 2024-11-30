@@ -68,9 +68,9 @@ def dashboard():
 
     # Buscar el usuario en la base de datos utilizando el ID
     user = User.query.get(user_id)
-    
+
     # Pasar el usuario a la plantilla para personalizar el dashboard
-    return render_template('dashboard.html', user=user)
+    return render_template('Dashboard.html', user=user)
 
 # Ruta para la página de creación de usuario
 @app.route('/create_user', methods=['GET', 'POST'])
