@@ -1,21 +1,14 @@
 {% extends 'base.html' %}
 
-{% block head %}
-<title>Password Generator</title>
-{% endblock %}
-
 {% block body %}
 <div id="MainContainer">
-    <h1>Password Generator</h1>
-    <h3 id="Title">Login</h3>
-    <form action="{{ url_for('login') }}" method="post">
+    <h1 id="Title">Create User</h1>
+    <form action="{{ url_for('create_user') }}" method="post">
         <label for="User">User:</label><br>
         <input type="text" id="user" name="User" placeholder="User/Mail" required><br>
         <label for="Password">Password:</label><br>
         <input type="password" id="Password" name="Psswrd" required><br>
-        <button type="submit">Log In</button>
+        <button type="submit">Create User</button>
     </form>
-
-    <a href="{{ url_for('create_user') }}">Don't have an account? Click here to create one</a>
 </div>
 {% endblock %}
