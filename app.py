@@ -81,4 +81,24 @@ def create_user():
         password = request.form['Psswrd']
         
         # Crear un nuevo usuario
-        hashed_password = generate_password_hash
+        hashed_password = generate_password_hash(password)
+        new_user = User(user=username, password=hashed_password)
+        
+        # Guardar el usuario en la base de datos
+        db.session.add(new_user)
+        db.session.commit()
+        
+        flash("User created successfully! You can now log in.", "success")
+        return redirect(url_for('login'))  # Redirigir al login
+    
+    return render_template('create_user.html')  # Página para crear usuario
+
+# Ruta para cerrar sesión
+@app.route('/logout')
+def logout():
+    session.pop('user_id', None)  # Eliminar el ID del usuario de la sesión
+    flash("You have been logged out.", "info")
+    return redirect(url_for('login'))
+
+if __name__ == '__main__':
+    app.run(debug=True)
