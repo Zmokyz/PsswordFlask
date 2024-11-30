@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Password Generator</title>
+{% endblock %}
+
+{% block body %}
+<div id="MainContainer">
+    <h1 id="Title">Password Generator</h1>
+    <form action="" method="post">
+        <label for="User">User:</label><br>
+        <input type="text" id="user" name="User" placeholder="User/Mail" ><br>
+        <label for="Psswrd">Password:</label><br>
+        <input type="password" id="Password" name="Psswrd">
+    </form>
+
+        <a href="RedirectToTeCreationPage">you don't have a user yet? Click here </a>
+</div>
+{% endblock %}
