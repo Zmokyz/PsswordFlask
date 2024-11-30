@@ -5,7 +5,6 @@
 {% endblock %}
 
 {% block body %}
-<div id="MainContainer">
     <h1>Password Generator</h1>
     <h3 id="Title">Login</h3>
     <form action="{{ url_for('login') }}" method="post">
@@ -17,5 +16,4 @@
     </form>
 
     <a href="{{ url_for('create_user') }}">Don't have an account? Click here to create one</a>
-</div>
 {% endblock %}

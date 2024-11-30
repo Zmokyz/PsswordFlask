@@ -1,7 +1,6 @@
 {% extends 'base.html' %}
 
 {% block body %}
-<div id="MainContainer">
     <h1 id="Title">Create User</h1>
     <form action="{{ url_for('create_user') }}" method="post">
         <label for="User">User:</label><br>
@@ -10,5 +9,4 @@
         <input type="password" id="Password" name="Psswrd" required><br>
         <button type="submit">Create User</button>
     </form>
-</div>
 {% endblock %}
